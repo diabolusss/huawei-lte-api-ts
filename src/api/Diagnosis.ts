@@ -23,7 +23,7 @@ export class Diagnosis extends ApiGroup {
     }
 
     setDiagnoseTraceroute(host: string, timeout: number = 4000, maxHopCount: number = 30): Promise<SetResponseType> {
-        return this._connection.postSet('diagnosis/diagnose_ping', {
+        return this._connection.postSet('diagnosis/diagnose_traceroute', {
             Host: host,
             MaxHopCount: maxHopCount,
             Timeout: timeout,
